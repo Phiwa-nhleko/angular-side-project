@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": false
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -8,9 +11,6 @@
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
-        },
-        "@schematics/angular:application": {
-          "strict": true
         }
       },
       "root": "",
@@ -107,5 +107,14 @@
       }
     }
   },
-  "defaultProject": "myappexample"
+  "defaultProject": "myappexample",
+  "schematics": {
+    "@schematics/angular:component": {
+      "inlineStyle": true,
+      "prefix": "Myapp"
+    },
+    "@schematics/angular:directive": {
+      "prefix": "my-app"
+    }
+  }
 }
